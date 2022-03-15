@@ -100,10 +100,9 @@ height: 1000px;
 /* List of Items */
 .list {
   max-width: 1400px;
-  /* margin: 20px auto; */
+  overflow-wrap: break-word;
   margin-left: 0;
   padding-inline-start: 0px;
-  /* color: white; */
   
 
 }
@@ -129,6 +128,8 @@ h3 {
   text-decoration: underline;
 }
 .list-description {
+  width: 85%;
+  overflow-wrap: break-word;
   font-size: smaller;
   color: #cacaca;
 }
