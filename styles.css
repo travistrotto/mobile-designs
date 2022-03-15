@@ -37,6 +37,7 @@ color: #707070;
 padding: 8px;
 text-decoration: none;
 font-weight: 200;
+list-style: inline;
 }
 
 .sidebar a.active {
@@ -214,6 +215,7 @@ border-left: 6px solid white;
   @media screen and (max-width: 400px) {
 
   .sidebar a {
+    display: inline;
     text-align: center;
     float: none;
   }
