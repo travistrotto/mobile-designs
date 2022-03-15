@@ -1,0 +1,200 @@
+
+body {
+margin: 0;
+font-family: monospace;
+color: white;
+background-color: #0e0d0d;
+}
+
+section {
+  height: 30%;
+}
+
+.content-section {
+  height: 5%;
+}
+
+.sidebar {
+text-align: center;
+margin: 0;
+padding: 0;
+width: 300px;
+background-color: #0e0d0d;
+position: fixed;
+height: 100%;
+overflow: auto;
+}
+
+.sidebar a {
+display: block;
+color: rgb(179, 179, 179);
+padding: 8px;
+text-decoration: none;
+}
+
+.sidebar a.active {
+/* background-color: #04AA6D; */
+    color: #cbfd03;
+    text-decoration: underline;
+}
+
+.sidebar a:hover:not(.active) {
+    /* background-color: #645969; */
+    text-decoration: underline;
+    color: #cbfd03;
+}
+
+.logo {
+ 
+}
+
+.avi {
+    border-radius: 50%;
+    width: 33%;
+}
+
+div.content {
+margin-left: 300px;
+padding: 1px 16px;
+height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+  img {
+    /* border-radius: 50%; */
+    width: 17%;
+  }
+
+
+  }
+  @media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/* ============== */
+
+.list {
+  max-width: 1400px;
+  /* margin: 20px auto; */
+  margin-left: 0;
+  padding-inline-start: 0px;
+  color: white;
+
+}
+
+.img-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.li-sub p {
+  margin: 0;
+  color: rgb(179, 179, 179);
+}
+.li-sub p:hover {
+  margin: 0;
+  color:#cbfd03;
+  text-decoration: underline;
+}
+
+.list li {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  /* border-bottom: 1px solid #ccc; */
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.list li:hover{
+border-left: 3px solid white;}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 30%;
+  padding-right: 1em;
+}
+.li-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+}
+.li-head {
+  margin: 10px 0 0 0;
+}
+.li-sub {
+  margin: 0;
+}
+
+@media all and (min-width: 45em) {
+
+  .list li {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 75em) {
+
+  .list li {
+    width: 33.33333%;
+  }
+}
+
+/* for flexbox */
+@supports(display: flex) {
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .li-img,
+  .li-text,
+  .list li {
+    display: block;
+    float: none;
+ 
+  }
+
+  .li-img {
+    align-self: center; /* to match the middle alignment of the original */
+  }
+  
+  .inner {
+    display: flex;
+  }
+}
+
+/* for grid */
+@supports(display: grid) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  
+  .list li {
+    width: auto; /* this overrides the media queries */
+  }
+}
